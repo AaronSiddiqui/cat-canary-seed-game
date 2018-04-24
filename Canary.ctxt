@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Canary
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Canary\ here.\r\n\r\n\ @author\ (Conor\ Hayes)\r\n\ @version\ (October\ 5th\ 2017)\r\n
+comment1.params=name
+comment1.target=Canary(java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Canary\r\n
+comment2.params=location
+comment2.target=void\ setLocation(Location)
+comment3.params=
+comment3.target=Location\ getLocation()
+comment4.params=
+comment4.target=int\ getCalories()
+comment5.params=
+comment5.target=int\ extractEnergy()
+comment6.params=
+comment6.target=void\ sing()
+comment6.text=\r\n\ Sing\ method\ overrides\ the\ sing\ method\r\n\ inherited\ from\ superclass\ Bird\r\n
+comment7.params=food
+comment7.target=boolean\ eat(Food)
+comment8.params=destination
+comment8.target=boolean\ move(Location)
+comment9.params=
+comment9.target=void\ printLocation()
+numComments=10

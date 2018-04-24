@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Seed
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Seed\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=name
+comment1.target=Seed(java.lang.String)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Seed\r\n
+comment2.params=location
+comment2.target=void\ setLocation(Location)
+comment3.params=
+comment3.target=Location\ getLocation()
+comment4.params=
+comment4.target=int\ getCalories()
+comment5.params=
+comment5.target=int\ extractEnergy()
+comment6.params=destination
+comment6.target=boolean\ move(Location)
+comment7.params=
+comment7.target=void\ printLocation()
+numComments=8

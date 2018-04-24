@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=GridObject
+comment0.text=\r\n\ Write\ a\ description\ of\ interface\ GridObject\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=location
+comment1.target=void\ setLocation(Location)
+comment2.params=
+comment2.target=Location\ getLocation()
+comment3.params=destination
+comment3.target=boolean\ move(Location)
+comment4.params=
+comment4.target=void\ printLocation()
+numComments=5
