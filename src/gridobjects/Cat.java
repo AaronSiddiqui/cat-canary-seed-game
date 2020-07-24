@@ -1,6 +1,6 @@
-package GridObjects;
+package gridobjects;
 
-import Grid.Location;
+import grid.Location;
 
 // Concrete class for the cat
 public class Cat extends Feline implements GridObject { 

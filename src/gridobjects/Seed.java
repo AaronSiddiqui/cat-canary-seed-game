@@ -1,6 +1,6 @@
-package GridObjects;
+package gridobjects;
 
-import Grid.Location;
+import grid.Location;
 
 // Concrete class for the see
 public class Seed extends Vegetable implements Food,GridObject {

@@ -1,4 +1,4 @@
-package GridObjects;
+package gridobjects;
 
 // Abstract class for the food classes
 public interface Food {

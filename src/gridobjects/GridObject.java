@@ -1,6 +1,6 @@
-package GridObjects;
+package gridobjects;
 
-import Grid.Location;
+import grid.Location;
 
 // Abstract class for the grid objects
 public interface GridObject {

@@ -1,4 +1,4 @@
-package GridObjects;
+package gridobjects;
 
 // Abstract class for the vegetable classes
 public abstract class Vegetable implements Food {

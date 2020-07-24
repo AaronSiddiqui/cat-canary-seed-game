@@ -1,12 +1,12 @@
-package Grid;
+package grid;
 
 import java.util.ArrayList;
 
-import GridObjects.Animal;
-import GridObjects.Canary;
-import GridObjects.Cat;
-import GridObjects.GridObject;
-import GridObjects.Seed;
+import gridobjects.Animal;
+import gridobjects.Canary;
+import gridobjects.Cat;
+import gridobjects.GridObject;
+import gridobjects.Seed;
 
 // Concrete class for the grid
 // Uses a 2D square grid

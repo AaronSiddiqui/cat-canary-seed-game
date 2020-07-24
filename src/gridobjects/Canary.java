@@ -1,6 +1,6 @@
-package GridObjects;
+package gridobjects;
 
-import Grid.Location;
+import grid.Location;
 
 // Concrete class for the canary
 public class Canary extends Bird implements Food, GridObject {

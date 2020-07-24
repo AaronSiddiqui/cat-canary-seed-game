@@ -1,7 +1,7 @@
-import Grid.Grid;
-import GridObjects.Seed;
-import GridObjects.Canary;
-import GridObjects.Cat;
+import grid.Grid;
+import gridobjects.Seed;
+import gridobjects.Canary;
+import gridobjects.Cat;
 
 public class GridTest {
     public static void main(String[] args) {

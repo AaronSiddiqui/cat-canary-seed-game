@@ -1,4 +1,4 @@
-package GridObjects;
+package gridobjects;
 
 // Abstract class for all the bird classes
 public abstract class Bird extends Animal {

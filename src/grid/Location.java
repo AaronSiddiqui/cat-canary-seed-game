@@ -1,6 +1,6 @@
-package Grid;
+package grid;
 
-import GridObjects.GridObject;
+import gridobjects.GridObject;
 
 // Concrete class for the location
 // Uses x and y coordinates
