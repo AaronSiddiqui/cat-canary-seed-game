@@ -22,4 +22,4 @@ The winner is the cat or canary with the highest energy when the rounds have con
 
 To run a simple test of the game using 3 seeds, 3 canaries and 1 cat, run the **test/GridTest.java** file with your favourite editor, IDE, or CLI tool (I personally ran this using an Eclipse project).
 
-If you want to run your own scenarios, either modify the current one or create more tests.
+If you want to run your own scenarios, either modify the this file or create your own tests.
