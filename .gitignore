@@ -1,0 +1,8 @@
+# Java files
+*.class
+
+# Eclipse files
+bin/**
+.classpath
+.project
+.settings/
