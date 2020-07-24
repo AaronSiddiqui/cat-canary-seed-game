@@ -1,4 +1,4 @@
-# Cat, Canary & Seed Game
+# The Cat, the Canary & the Seed
 
 This is a simple score-based game involving cats, canaries and seeds on a 2-dimensional grid. One cat and a selection of canaries and seeds are randomly distributed on the board. Then the cats and canaries move to a new space over a number of rounds, decided by the user.
 
