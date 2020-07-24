@@ -1,16 +1,12 @@
+package GridObjects;
 
-/**
- * Abstract class Vegetable - write a description of the class here
- *
- * @author (your name here)
- * @version (version number or date here)
- */
-public abstract class Vegetable implements Food
-{
+// Abstract class for the vegetable classes
+public abstract class Vegetable implements Food {
     int calories;
     String name;
-
-    public String getName(){ // concrete method
+    
+    // Concrete method because it doesn't change for the children classes
+    public String getName() {
         return name;
     }
 }

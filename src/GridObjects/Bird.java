@@ -1,46 +1,29 @@
+package GridObjects;
 
-/**
- * Write a description of class Bird here.
- *
- * @author (conor hayes)
- * @version (October 5th 2017)
- */
-public abstract class Bird extends Animal
-{
+// Abstract class for all the bird classes
+public abstract class Bird extends Animal {
     boolean hasFeathers;
     boolean hasWings;
     boolean flies;
 
-    /**
-     * Constructor for objects of class Bird
-     */
-    public Bird()
-    {
-        super(); //calls the constructor of its superclass  - Animal
-        colour = "black"; //overrides the value of colour inherited from Animal
-        hasFeathers = true; //all the subclasses of Bird inherit this property and value
-        hasWings = true; //all the subclasses of Bird inherit this property and value
-        flies = true; //all the subclasses of Bird inherit this property and value
+    public Bird() {
+    	// Overrides some default fields
+        super();
+        colour = "black";
+        hasFeathers = true;
+        hasWings = true;
+        flies = true;
     }
     
-    /**
-     * sing method that all birds have
-     */
-    public void sing(){
+    public void sing() {
         System.out.println("tra la la");
     }
-    
-    /**
-     * 'getter' method for the hasWings field
-     */
-    public boolean hasWings(){
+
+    public boolean hasWings() {
         return hasWings;
     }
     
-    /**
-     * 'getter' method for the hasFeathers field
-     */
-    public boolean hasFeathers(){
+    public boolean hasFeathers() {
         return hasFeathers;
     }
 }

@@ -1,84 +1,88 @@
+package GridObjects;
 
-/**
- * Write a description of class Cat here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Cat extends Feline implements GridObject
-{ 
-    private Location location; //location of the Cat Object
+import Grid.Location;
+
+// Concrete class for the cat
+public class Cat extends Feline implements GridObject { 
+    private Location location;
     
-    /**
-     * Constructor for objects of class Cat
-     */
-    public Cat(String name)
-    {
+    public Cat(String name) {
+    	// Overrides some default fields
         super();
         this.name = name;
         colour = "black";
-        energy = 10; // starting energy
+        energy = 10;
     }
     
     @Override
-    public void setLocation(Location location){ //sets the location
+    public void setLocation(Location location) {
         this.location = location;
     }
     
     @Override
-    public Location getLocation(){ //gets the location
+    public Location getLocation() {
         return location;
     }
     
+    // Determines if and how the cat can eat its food
     @Override
-    public boolean eat(Food food){
-        if(food == null){
-            return false; //checks to see if the Food Object is null and returns false
+    public boolean eat(Food food) {
+    	// A check to see if the Food object is empty
+        if (food == null) {
+            return false;
         }
         
-        if(food instanceof Canary){ //checks to see if the Food Object is a Canary Object
-            Canary canary = (Canary) food; //casts reference to the Canary Object
+        // Checks to see if the Food object is a canary, extracts the energy and prints the result
+        if (food instanceof Canary) {
+            Canary canary = (Canary) food;
             
-            energy += canary.extractEnergy(); // extracts the energy from the Seed Object
-            System.out.println(getName() + " has eaten " + canary.getName() + ". Energy level at " + energy + "."); //prints that the Cat Object has eaten the Canary Object and its energy
+            energy += canary.extractEnergy();
+            System.out.println(getName() + " has eaten " + canary.getName() + ". Energy level at " + energy + ".");
             
-            return true; //returns true if the Cat Object ate the Canary Object
+            return true;
         }
-        else if(food instanceof Seed){
-            Seed seed = (Seed) food; //casts reference to the Seed Object
+        // Check to see if the Food object is a seed and prints that it's inedible
+        else if (food instanceof Seed) {
+            Seed seed = (Seed) food;
             
-            System.out.println(getName() + " cannot eat this " + seed.getName() +".");  //prints that is can't eat the Seed Object
+            System.out.println(getName() + " cannot eat this " + seed.getName() +".");
         }
-        return false; //returns false if there was a problem eating i.e. couldn't eat the Seed Object
+        
+        // Returns false otherwise
+        return false;
     }
     
+    // Determines how the cat will move
     @Override
-    public boolean move(Location destination){
-        if(energy > 0){
-            double distance = this.location.distanceTo(destination); //calculates the distance travelled to the destination
-            setLocation(destination); //sets that destination as the location of the Cat Object
+    public boolean move(Location destination) {
+        if (energy > 0) {
+        	// Calculates the distance to travel to the destination and sets the new location
+            double distance = this.location.distanceTo(destination);
+            setLocation(destination);
 
-            System.out.printf("%s runs %f metres. ", getName(), distance); //prints the distance the Cat Object moved
-            energy -= 2; //loses two units of energy for every move
+            System.out.printf("%s runs %f metres. ", getName(), distance);
+            energy -= 2;	// Decrements by 2 energy for the movement
             
+            // A check to ensure the energy doesn't become negative
             if(energy < 0){
-                energy = 0; //if the energy get goes below 0, this changes it to 0
+                energy = 0;
             }
             
-            System.out.printf("%s now has Energy level: %d\n", getName(), energy); //prints the energy of the Cat Object
-            printLocation(); //prints the location of the Cat Object
-            
-            return true; //returns true if the Cat Object has enough energy
+            System.out.printf("%s now has Energy level: %d\n", getName(), energy);
+            printLocation();
+            return true;
         }
-        else{
-            System.out.println(getName() + " is out of energy and cannot move."); //prints that the  Cat Object is out of energy and can't move
+        // Prints if the cat is out of energy
+        else {
+            System.out.println(getName() + " is out of energy and cannot move.");
         }
         
-        return false; //returns false if the Cat Object doesn't have enough energy
+        // Returns false if the cat is out of energy
+        return false;
     }
     
     @Override
-    public void printLocation(){ //prints the location of the Cat Object
+    public void printLocation() {
         System.out.println(getName() + " is at " + location + "."); 
     }
 }

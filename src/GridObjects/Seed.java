@@ -1,52 +1,48 @@
+package GridObjects;
 
-/**
- * Write a description of class Seed here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Seed extends Vegetable implements Food,GridObject
-{
-    private Location location; //location of the Seed Object
+import Grid.Location;
 
-    /**
-     * Constructor for objects of class Seed
-     */
-    public Seed(String name)
-    {
+// Concrete class for the see
+public class Seed extends Vegetable implements Food,GridObject {
+    private Location location;
+
+    public Seed(String name) {
         super();
         calories = 10;
         this.name = name;
     }
     
     @Override
-    public void setLocation(Location location){ //sets the location
+    public void setLocation(Location location) {
         this.location = location;
     }
     
     @Override
-    public Location getLocation(){ //get the location
+    public Location getLocation() {
         return location;
     }
     
     @Override
-    public int getCalories(){ //gets the calories
+    public int getCalories( ){
         return calories;
     }
     
+    // Removes the energy from the seed
     @Override
-    public int extractEnergy(){ //gets the energy from a Seed Object
+    public int extractEnergy() {
         int cal = calories;
         calories = 0;
         return cal;
     }
     
+    // Determines how the seed will move
+    // SHOCK HORROR, it doesn't
     @Override
-    public boolean move(Location destination){ //move method of a Seed Object
-        return false; //returns false because a Seed Object can't move
+    public boolean move(Location destination) {
+        return false;
     }
     
-    public void printLocation(){ //prints the location of the Seed Object
+    public void printLocation() {
         System.out.println(name + " at " + location + " with calories " + calories + ", cannot move."); 
     }
 }

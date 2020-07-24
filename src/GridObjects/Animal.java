@@ -1,63 +1,37 @@
-/**
- * Write a description of class Animal here.
- *
- * @author (conor hayes)
- * @version (October 5th 2017)
- */
-public abstract class Animal
-{
-    // instance variables - replace the example below with your own
+package GridObjects;
+
+// Abstract class for all of the animal classes
+public abstract class Animal {
     boolean hasSkin;
     boolean breathes;
     String colour;
     int energy;
-    String name; // each Animal has a name
+    String name;
     
-    /**
-     * Constructor for objects of class Animal
-     */
-    public Animal()
-    {
-        breathes = true; //all the subclasses of Animal inherit this property and value
-        hasSkin = true; // all the subclasses of Animal inherit this property and value
-        colour = "grey"; //all the subclasses of Animal inherit this property and value
+    public Animal() {
+    	// Default fields
+        breathes = true;
+        hasSkin = true;
+        colour = "grey";
     }
     
-    /**
-     * eat method
-     * param Food food - food the Animal should eat
-     * We haven't defined this yet
-     * All subclasses inherit this method
-     */
+    // Determines if and how an animal can eat its food
     public abstract boolean eat(Food food);
     
-    /**
-     * getter method for colour field
-     * All subclasses inherit this method
-     */
-    public String getColour(){
+    public String getColour() {
         return colour;
     }
     
-    /**
-     * getter method for colour field
-     * All subclasses inherit this method
-     */
-    public int getEnergy(){
+    public int getEnergy() {
         return energy;
     }
     
-    
-     /**
-     * 'getter' method for haSkin field
-     * All subclasses inherit this method
-     */
-    
-    public boolean hasSkin(){
+    public boolean hasSkin() {
         return hasSkin;
     }
     
-    public String getName(){
+    // String method to return the animal's name
+    public String getName() {
         String str = name;
         str+=" the ";
         Class cls = getClass();

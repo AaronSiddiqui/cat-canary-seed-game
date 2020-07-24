@@ -1,68 +1,65 @@
+package Grid;
 
-/**
- * Write a description of class Location here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Location
-{
-    public final int x; //x coordinate that is globally available and can't be changed
-    public final int y; //y coordinate that is globally available and can't be changed
-    private GridObject gridObject; //GridObject in this location
-    private boolean occupied; //boolean to see if the location is occupied by a GridObject
+import GridObjects.GridObject;
 
-    /**
-     * Constructor for objects of class Location
-     */
-    public Location(int x, int y)
-    {
-       this.x = x;  //initialises the variables
+// Concrete class for the location
+// Uses x and y coordinates
+public class Location {
+	// x and y are global (anyone grid object should be able to access them) and immutable (they don't change)
+    public final int x;
+    public final int y;
+    private GridObject gridObject; 	//Current grid object in this location
+    private boolean occupied;		//Boolean to see if the location is occupied by a grid object
+
+    public Location(int x, int y) {
+       this.x = x;
        this.y = y;
     }
 
-    public GridObject getGridObject(){ //returns the GridObject
+    public GridObject getGridObject() {
         return gridObject;
     }
     
-    public void setGridObject(GridObject gridObject){ //sets the GridObject in this location
-        if(gridObject == null){
-            this.gridObject = null;  //if the GridObject is null, it changes the GridObject in this location to null and changes occupied to false
+    public void setGridObject(GridObject gridObject) {
+    	// First checks if the current location is unoccupied
+        if (gridObject == null) {
+            this.gridObject = null;
             occupied = false;
             return;
         }
         
-        this.gridObject = gridObject; //sets the GridObject in this location and changes occupied to true
+        // If it's not occupied it sets the grid object and occupation
+        this.gridObject = gridObject;
         occupied = true;
     }
     
-    public boolean isOccupied(){ //checks to see if this location is occupied or not
+    public boolean isOccupied() {
         return occupied;
     }
     
-    /**
-     * calacultes the shortest distance between this location
-     * and the input location
-     */
-    public double distanceTo(Location location){ //calculates the distance that the GridObject travelled
-        double temp = (this.x - location.x)* (this.x - location.x) + (this.y - location.y)*(this.y - location.y); //Pythagoras' Theorem
-        return Math.sqrt(temp); //returns the square root of temp
+    // Calculates the shortest distance between this location and the input location
+    public double distanceTo(Location location) {
+    	// Uses Pythagoras' Theorem to do this
+        double temp = (this.x - location.x)* (this.x - location.x) + (this.y - location.y)*(this.y - location.y);
+        return Math.sqrt(temp);
     }
     
+    // Returns the coordinates as a string
     @Override
-    public String toString(){ //converts coordinates to String
+    public String toString() {
         String str = "";
         str += "Location (" + x +","+ y + ")";
         return str;
     }
     
     @Override
-    public boolean equals(Object object){ //checks to see if the Location Objects are equal
-        if (object==null){
+    public boolean equals(Object object) {
+    	// A check to see if the object is null
+        if (object == null) {
           return false;  
         }
         
-        if (object instanceof Location){
+        if (object instanceof Location) {
             Location location = (Location) object;
             
             if(location.x == x && location.y ==y){
